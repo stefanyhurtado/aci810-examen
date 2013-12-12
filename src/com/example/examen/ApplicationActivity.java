@@ -9,6 +9,8 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 
+
+import com.example.examen.db.TitleActivity;
 import com.example.examen.helpers.PreferencesHelper;
 
 public class ApplicationActivity extends Activity {
@@ -50,4 +52,9 @@ public class ApplicationActivity extends Activity {
 		Intent login = new Intent(this, LoginActivity.class);
 		this.startActivity(login);
 	}
+	public void onAceptarButtonClicked(View view) {
+        Intent intent=new Intent(this,TitleActivity.class);
+        startActivity(intent);
+       
+}
 }

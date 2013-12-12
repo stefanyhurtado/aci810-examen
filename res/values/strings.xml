@@ -8,6 +8,11 @@
     <string name="title_activity_login">Login</string>
     <string name="title_activity_register">Registration</string>
     <string name="title_activity_application">Home</string>
+    <string name="title_activity_title">TitleActivity</string>
+    <string name="title_activity_editar__title">Editar_TitleActivity</string>
+    <string name="title_activity_guardar__title">Guardar_TitleActivity</string>
+    <string name="title_activity_primer">PrimerActivity</string>
+    <string name="title_activity_lugar">LugarActivity</string>
 
     <!-- LABELS -->
     <string name="name_label">Name</string>
@@ -15,11 +20,26 @@
     <string name="password_label">Password</string>
     <string name="password_confirmation_label">Confirm Password</string>
     <string name="welcome_label">Welcome</string>
+    <string name="EditText"></string>
+    <string name="TextView">Hello world</string>
+    <string name="EditText1"></string>
+    <string name="TextView1">Hello world</string>
+    <string name="EditText2">Name</string>
+    <string name="EditText3">Description</string>
 
     <!-- BUTTONS -->
     <string name="register_button_label">Register</string>
     <string name="login_button_label">Login</string>
     <string name="logout_button_label">Logout</string>
     <string name="profile_button_label">Profile</string>
+    <string name="aceptar_button_label">Aceptar</string>
+    <string name="editar_button_label">Editar</string>
+    <string name="guardar_button_label">Guardar</string>
+    <string name="next_button_label">Next</string>
+    <string name="add_button_label">Add</string>
+    <string name="save_button_label">Save</string>
+   <string name="delete_button_label">Delete</string>
+   
+   
 
 </resources>

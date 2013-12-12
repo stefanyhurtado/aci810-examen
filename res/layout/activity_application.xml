@@ -23,6 +23,23 @@
         android:text="@string/profile_button_label"
         android:onClick="onProfileButtonClicked" />
      
+     <EditText
+	      android:id="@+id/EditText1"
+	      android:inputType="textEmailAddress"
+	      android:layout_width="fill_parent"
+	      android:layout_height="wrap_content"
+	      android:ems="10"
+	      android:hint="@string/EditText" />
+	
+	 <Button
+	        android:id="@+id/Button1"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="17dp"
+	        android:text="@string/aceptar_button_label"
+	        android:onClick="onAceptarButtonClicked" />
+	 
+     
        <Button
         android:id="@+id/logoutButton"
         android:layout_width="wrap_content"

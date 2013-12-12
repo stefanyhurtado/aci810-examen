@@ -34,6 +34,26 @@
             android:name="com.example.examen.ApplicationActivity"
             android:label="@string/title_activity_application" >
         </activity>
+        <activity
+            android:name="com.example.examen.db.TitleActivity"
+            android:label="@string/title_activity_title" >
+        </activity>
+        <activity
+            android:name="com.example.examen.db.Editar_TitleActivity"
+            android:label="@string/title_activity_editar__title" >
+        </activity>
+        <activity
+            android:name="com.example.examen.db.Guardar_TitleActivity"
+            android:label="@string/title_activity_guardar__title" >
+        </activity>
+        <activity
+            android:name="com.example.examen.db.PrimerActivity"
+            android:label="@string/title_activity_primer" >
+        </activity>
+        <activity
+            android:name="com.example.examen.db.LugarActivity"
+            android:label="@string/title_activity_lugar" >
+        </activity>
     </application>
 
 </manifest>
