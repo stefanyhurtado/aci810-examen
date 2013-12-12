@@ -24,7 +24,7 @@ public class MyAppDbHelper extends SQLiteOpenHelper{
 		    "CREATE TABLE " + Place.TABLE_NAME + " (" +
 		    Place._ID + " INTEGER PRIMARY KEY," +
 		    Place.COLUMN_NAME_NAME + TEXT_TYPE + COMMA_SEPARATOR +
-		    Place.COLUMN_NAME_DESCRIPTION + TEXT_TYPE + COMMA_SEPARATOR +
+		    Place.COLUMN_NAME_DESCRIPTION + TEXT_TYPE +
 		      
 		    " )";
 	

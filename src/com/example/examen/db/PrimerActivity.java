@@ -95,9 +95,11 @@ public class PrimerActivity extends ListActivity  {
 		return true;
 	}
 	public void onAddButtonClicked(View view) {
-        Intent intent=new Intent(this,LugarActivity.class);
-        startActivity(intent);
+		Intent i = new Intent(this, LugarActivity.class);
+		this.startActivityForResult(i, REQUEST_CODE_ADD_LUGAR);
+	}
+
        
 }
 
-}
+
