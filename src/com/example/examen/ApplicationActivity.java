@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.TextView;
 
 
+import com.example.examen.db.CompraActivity;
+import com.example.examen.db.LugarActivity;
 import com.example.examen.db.TitleActivity;
 import com.example.examen.helpers.PreferencesHelper;
 
@@ -56,5 +58,16 @@ public class ApplicationActivity extends Activity {
         Intent intent=new Intent(this,TitleActivity.class);
         startActivity(intent);
        
+}
+	public void onClickLugar(View view) {
+        Intent intent=new Intent(this,LugarActivity.class);
+        startActivity(intent);
+       
+}
+
+public void onClickCompra(View view) {
+    Intent intent=new Intent(this,CompraActivity.class);
+    startActivity(intent);
+   
 }
 }

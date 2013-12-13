@@ -13,6 +13,8 @@
     <string name="title_activity_guardar__title">Guardar_TitleActivity</string>
     <string name="title_activity_primer">PrimerActivity</string>
     <string name="title_activity_lugar">LugarActivity</string>
+    <string name="title_activity_compra">CompraActivity</string>
+    <string name="title_activity_compras">ComprasActivity</string>
 
     <!-- LABELS -->
     <string name="name_label">Name</string>
@@ -26,6 +28,8 @@
     <string name="TextView1">Hello world</string>
     <string name="EditText2">Name</string>
     <string name="EditText3">Description</string>
+    <string name="EditText4">Compras</string>
+    <string name="EditText5">Descriptions</string>
 
     <!-- BUTTONS -->
     <string name="register_button_label">Register</string>
@@ -38,8 +42,6 @@
     <string name="next_button_label">Next</string>
     <string name="add_button_label">Add</string>
     <string name="save_button_label">Save</string>
-   <string name="delete_button_label">Delete</string>
-   
-   
-
+    <string name="delete_button_label">Delete</string>
+    
 </resources>

@@ -3,7 +3,9 @@ package com.example.examen.db.db;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.example.examen.db.db.MyAppContract.Compras;
 import com.example.examen.db.db.MyAppContract.Place;
+import com.example.examen.db.model.Compra;
 import com.example.examen.db.model.Lugar;
 
 import android.content.ContentValues;
@@ -117,8 +119,110 @@ public class MyAppDataSource {
 	    return l;
 	   
 	}
+	 private String[] allColumns1 = {
+             Compras._ID,
+             Compras.COLUMN_NAME_COMPRA,
+             Compras.COLUMN_NAME_DESCRIPTIONS,
+             };
 
+
+
+
+
+
+ public Compra createCompra(String compra1, String descriptions1) {
+         ContentValues values = new ContentValues();
+         values.put(Compras.COLUMN_NAME_COMPRA, compra1);
+         values.put(Compras.COLUMN_NAME_DESCRIPTIONS, descriptions1);                
+         
+         
+ 
+         
+     long insertId = db.insert(Compras.TABLE_NAME, null, values);
+     
+     Cursor c = db.query(
+                     Compras.TABLE_NAME,
+                     this.allColumns1, Compras._ID + " = " + insertId, 
+                     null,
+                     null, 
+                     null, 
+                     null
+             );
+     c.moveToFirst();
+     
+     Compra co = cursorToCompra(c);
+     c.close();
+     
+     return co;
+ 
+ }
+ 
+ public Compra updateCompra(Compra co, String compra1, String descriptions1) {
+         ContentValues values = new ContentValues();
+         values.put(Compras.COLUMN_NAME_COMPRA, compra1);
+         values.put(Compras.COLUMN_NAME_DESCRIPTIONS, descriptions1);   
+         
+         
+         
+     db.update(Compras.TABLE_NAME, values, Compras._ID + " = " + co.getId(), null);
+     
+     co.setCompra(compra1);
+     co.setDescriptions(descriptions1);
+    
+     
+     return co;
+ }
+ 
+ public List<Compra> getCompras() {
+     List<Compra> compras = new ArrayList<Compra>();
+     
+     String sortOrder = Compras.COLUMN_NAME_COMPRA + " DESC";
+     
+     Cursor c = db.query(
+                     Compras.TABLE_NAME,        // The table to query
+                     this.allColumns,                        // The columns to return
+                     null,                                // The columns for the WHERE clause
+                     null,                                // The values for the WHERE clause
+                     null,                                // don't group the rows
+                     null,                                // don't filter by row groups
+                     sortOrder                        // The sort order
+             );
+
+
+     c.moveToFirst();
+     while (!c.isAfterLast()) {
+       Compra co = cursorToCompra(c);
+       compras.add(co);
+       c.moveToNext();
+     }
+     
+     // make sure to close the cursor
+     c.close();
+     
+     return compras;
+ }
+ 
+ public Compra deleteCompra(Compra co) {
+     long id = co.getId();
+     db.delete(Compras.TABLE_NAME, Compras._ID + " = " + id, null);
+     co.setId(0);
+     return co;
+ }
+
+
+ 
+ private Compra cursorToCompra(Cursor cursor) {
+         Compra co = new Compra();
+     co.setId(cursor.getLong(0));//
+     co.setCompra(cursor.getString(1));
+     co.setDescriptions(cursor.getString(2));
+     
+     return co;
+ }
 }
+
+
+
 
 
 

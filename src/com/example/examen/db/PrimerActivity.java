@@ -38,7 +38,7 @@ public class PrimerActivity extends ListActivity  {
 	    ds.open();
 	    
 	    List<Lugar> values = ds.getPlace();
-	    
+	   
 	    // use the SimpleCursorAdapter to show the elements in a ListView
 	    ArrayAdapter<Lugar> adapter = new ArrayAdapter<Lugar>(
 	    		this,
@@ -98,7 +98,7 @@ public class PrimerActivity extends ListActivity  {
 		Intent i = new Intent(this, LugarActivity.class);
 		this.startActivityForResult(i, REQUEST_CODE_ADD_LUGAR);
 	}
-
+	
        
 }
 

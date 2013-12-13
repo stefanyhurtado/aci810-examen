@@ -1,5 +1,4 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    
      xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,19 +9,19 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     style="?android:attr/buttonBarButtonStyle"
-    tools:context=".LugarActivity" >
-    
-     <EditText
-        android:id="@+id/EditText2"
+    tools:context=".ComprasActivity" >
+
+       <EditText
+        android:id="@+id/EditText4"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/EditText2" />
+        android:hint="@string/EditText4" />
     
 	<EditText
-	      android:id="@+id/EditText3"
+	      android:id="@+id/EditText5"
 	      android:layout_width="fill_parent"
 	      android:layout_height="wrap_content"
-	      android:hint="@string/EditText3" />
+	      android:hint="@string/EditText5" />
       
     	 <Button
 	        android:id="@+id/saveButton"
@@ -41,4 +40,5 @@
 	        android:visibility="invisible"
 	        android:onClick="onDeleteButtonClicked" />
 	
+
 </LinearLayout>

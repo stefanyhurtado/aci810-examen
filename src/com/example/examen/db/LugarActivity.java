@@ -19,6 +19,7 @@ public class LugarActivity extends Activity {
 	
 	private MyAppDataSource ds;
 	private Lugar lugarToUpdate;
+
 	
 
 
@@ -161,6 +162,9 @@ getActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 
 }
+
+
+
 
 
 

@@ -13,6 +13,12 @@ public class MyAppContract {
 		public static final String COLUMN_NAME_DESCRIPTION = "description";
 		
 	}
+	public static abstract class Compras implements BaseColumns {
+        public static final String TABLE_NAME = "compras";
+        public static final String COLUMN_NAME_COMPRA = "compra";
+        public static final String COLUMN_NAME_DESCRIPTIONS = "descriptions";
+}
+
 
 
 }

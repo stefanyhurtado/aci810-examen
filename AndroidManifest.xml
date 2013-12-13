@@ -54,6 +54,18 @@
             android:name="com.example.examen.db.LugarActivity"
             android:label="@string/title_activity_lugar" >
         </activity>
+        <activity
+            android:name="com.example.examen.db.CompraActivity"
+            android:label="@string/title_activity_compra" >
+        </activity>
+        <activity
+            android:name="com.example.examen.db.CompraActivity"
+            android:label="@string/title_activity_compra" >
+        </activity>
+        <activity
+            android:name="com.example.examen.db.ComprasActivity"
+            android:label="@string/title_activity_compras" >
+        </activity>
     </application>
 
 </manifest>

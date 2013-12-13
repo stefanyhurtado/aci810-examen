@@ -1,7 +1,13 @@
 package com.example.examen.db.Listerner;
 
+
+import com.example.examen.db.CompraActivity;
+import com.example.examen.db.ComprasActivity;
 import com.example.examen.db.LugarActivity;
+
 import com.example.examen.db.PrimerActivity;
+
+import com.example.examen.db.model.Compra;
 import com.example.examen.db.model.Lugar;
 
 import android.app.Activity;
@@ -27,8 +33,19 @@ public void onItemClick(AdapterView<?> parent, View view, int position, long id)
 		i.putExtra("lugar", l);
 		this.activity.startActivityForResult(i, PrimerActivity.REQUEST_CODE_UPDATE_LUGAR);			
 	}
+	Compra co = (Compra) parent.getItemAtPosition(position);
+    
+    if(co != null)
+    {
+            Intent i = new Intent(this.activity, ComprasActivity.class);
+            i.putExtra("compra", co);
+            this.activity.startActivityForResult(i, CompraActivity.REQUEST_CODE_UPDATE_COMPRA);                        
+    }
 }
 
+    
 }
+
+
 
 

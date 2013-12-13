@@ -1,5 +1,6 @@
 package com.example.examen.db.db;
 
+import com.example.examen.db.db.MyAppContract.Compras;
 import com.example.examen.db.db.MyAppContract.Place;
 
 import android.content.Context;
@@ -27,6 +28,16 @@ public class MyAppDbHelper extends SQLiteOpenHelper{
 		    Place.COLUMN_NAME_DESCRIPTION + TEXT_TYPE +
 		      
 		    " )";
+	private static final String SQL_CREATE_COMPRAS =
+            "CREATE TABLE " + Compras.TABLE_NAME + " (" +
+            Compras._ID + " INTEGER PRIMARY KEY," +
+            Compras.COLUMN_NAME_COMPRA + TEXT_TYPE + COMMA_SEPARATOR +
+            Compras.COLUMN_NAME_DESCRIPTIONS + TEXT_TYPE + 
+            " )";
+
+private static final String SQL_DROP_COMPRAS =
+            "DROP TABLE IF EXISTS " + Compras.TABLE_NAME;
+
 	
 	private static final String SQL_DROP_PLACE =
 		    "DROP TABLE IF EXISTS " + Place.TABLE_NAME;
@@ -37,6 +48,7 @@ public class MyAppDbHelper extends SQLiteOpenHelper{
     
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE_PLACE);
+        db.execSQL(SQL_CREATE_COMPRAS);
     }
     
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
@@ -46,6 +58,7 @@ public class MyAppDbHelper extends SQLiteOpenHelper{
     	);
 
     	db.execSQL(SQL_DROP_PLACE);
+    	db.execSQL(SQL_DROP_COMPRAS);
     	onCreate(db);
     }
     
