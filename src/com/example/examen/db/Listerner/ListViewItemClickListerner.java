@@ -25,26 +25,32 @@ public ListViewItemClickListerner(Activity activity) {
 }
 
 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-	Lugar l = (Lugar) parent.getItemAtPosition(position);
-	
-	if(l != null)
-	{
-		Intent i = new Intent(this.activity, LugarActivity.class);
-		i.putExtra("lugar", l);
-		this.activity.startActivityForResult(i, PrimerActivity.REQUEST_CODE_UPDATE_LUGAR);			
-	}
-	Compra co = (Compra) parent.getItemAtPosition(position);
-    
-    if(co != null)
-    {
-            Intent i = new Intent(this.activity, ComprasActivity.class);
-            i.putExtra("compra", co);
-            this.activity.startActivityForResult(i, CompraActivity.REQUEST_CODE_UPDATE_COMPRA);                        
-    }
+
+	  Object o = parent.getItemAtPosition(position);
+
+
+
+	  if(o instanceof Lugar)
+	  {
+	    Lugar lugar = (Lugar) o;
+	    Intent i = new Intent(this.activity, LugarActivity.class);
+	    i.putExtra("lugar", lugar);
+	    this.activity.startActivityForResult(i, PrimerActivity.REQUEST_CODE_UPDATE_LUGAR);
+	  }
+	  else if(o instanceof Compra)
+	  {
+	    Compra compra = (Compra) o;
+	    Intent i = new Intent(this.activity, ComprasActivity.class);
+	    i.putExtra("compra", compra);
+	    this.activity.startActivityForResult(i, CompraActivity.REQUEST_CODE_UPDATE_COMPRA);
+	  }
+
+
+}
 }
 
     
-}
+
 
 
 

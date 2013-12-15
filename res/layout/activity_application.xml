@@ -24,7 +24,7 @@
         android:onClick="onProfileButtonClicked" />
      
      <EditText
-	      android:id="@+id/EditText1"
+	      android:id="@+id/EditText"
 	      android:inputType="textEmailAddress"
 	      android:layout_width="fill_parent"
 	      android:layout_height="wrap_content"

@@ -15,17 +15,22 @@
     <string name="title_activity_lugar">LugarActivity</string>
     <string name="title_activity_compra">CompraActivity</string>
     <string name="title_activity_compras">ComprasActivity</string>
-
+    <string name="title_activity_principal">PrincipalActivity</string>
+    
+    
     <!-- LABELS -->
     <string name="name_label">Name</string>
     <string name="email_label">Email</string>
     <string name="password_label">Password</string>
     <string name="password_confirmation_label">Confirm Password</string>
     <string name="welcome_label">Welcome</string>
-    <string name="EditText"></string>
-    <string name="TextView">Hello world</string>
-    <string name="EditText1"></string>
-    <string name="TextView1">Hello world</string>
+    <string name="EditText">Escriba_Titulo</string>
+    <string name="TextView"></string>
+    <string name="TextView1"></string>
+    <string name="EditText1">Edite_Titulo</string>
+    <string name="TextView2"></string>
+     <string name="lugar">Lugar</string>
+     <string name="compra">Compras</string>
     <string name="EditText2">Name</string>
     <string name="EditText3">Description</string>
     <string name="EditText4">Compras</string>
@@ -43,5 +48,7 @@
     <string name="add_button_label">Add</string>
     <string name="save_button_label">Save</string>
     <string name="delete_button_label">Delete</string>
+     <string name="button_lugar">Lugar</string>
+      <string name="button_compra">Compra</string>
     
 </resources>

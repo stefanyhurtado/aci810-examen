@@ -7,15 +7,18 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 
 
-import com.example.examen.db.CompraActivity;
-import com.example.examen.db.LugarActivity;
+
 import com.example.examen.db.TitleActivity;
 import com.example.examen.helpers.PreferencesHelper;
 
 public class ApplicationActivity extends Activity {
+	
+	public final static String ESCRIBA_TITULO = "com.example.examen.ESCRIBA_TITULO";
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -55,19 +58,26 @@ public class ApplicationActivity extends Activity {
 		this.startActivity(login);
 	}
 	public void onAceptarButtonClicked(View view) {
-        Intent intent=new Intent(this,TitleActivity.class);
-        startActivity(intent);
+		
+		Intent intent = new Intent(this, TitleActivity.class);
+        
+       EditText EscribatEditText = (EditText) findViewById(R.id.EditText);
+       String Escriba_Titulo = EscribatEditText.getText().toString();
        
-}
-	public void onClickLugar(View view) {
-        Intent intent=new Intent(this,LugarActivity.class);
-        startActivity(intent);
        
-}
+       SharedPreferences sharedPref = getSharedPreferences("app-data",Context.MODE_PRIVATE);
+       SharedPreferences.Editor editor = sharedPref.edit();
+       editor.putString(ESCRIBA_TITULO, Escriba_Titulo);
+       editor.commit();
 
-public void onClickCompra(View view) {
-    Intent intent=new Intent(this,CompraActivity.class);
-    startActivity(intent);
-   
+		
+       startActivity(intent);
+    }
+
+
+
+		
+        
 }
-}
+	
+

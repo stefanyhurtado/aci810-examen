@@ -8,4 +8,6 @@ public class PreferencesHelper {
 	public final static String NAME_KEY = "com.example.examen.NAME_KEY";
 	public final static String EMAIL_KEY = "com.example.examen.EMAIL_KEY";
 	public final static String PASSWORD_KEY = "com.example.examen.PASSWORD_KEY";
+	
+	
 }

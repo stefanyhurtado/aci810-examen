@@ -66,6 +66,10 @@
             android:name="com.example.examen.db.ComprasActivity"
             android:label="@string/title_activity_compras" >
         </activity>
+        <activity
+            android:name="com.example.examen.PrincipalActivity"
+            android:label="@string/title_activity_principal" >
+        </activity>
     </application>
 
 </manifest>
